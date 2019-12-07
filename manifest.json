@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"name": "FCWX",
+	"version": "1.0",
+	"description": "微信里被屏蔽的链接不需要复制到浏览器了，直接点击就跳转。\n",
+	"author": "zhuxuyang",
+	"icons":
+	{
+		"48": "WechatIMG69.jpeg",
+		"128": "WechatIMG69.jpeg"
+	},
+	"browser_action":
+	{
+		"default_icon": "WechatIMG69.jpeg",
+		"default_popup": "popup.html"
+	},
+	"content_scripts":
+	[
+		{
+			"matches": ["https://weixin110.qq.com/*"],
+			"js": ["content-script.js"]
+		}
+	],
+	"web_accessible_resources":
+	[
+		"inject.js"
+	]
+}
